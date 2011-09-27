@@ -1,7 +1,7 @@
 class Productimage < ActiveRecord::Base
   belongs_to :product
   
-   has_attached_file :image, :style => {:thumb => '180x300>'}
+  has_attached_file :image, :style => {:thumb => '180x300>'},
     :storage => :s3,
     :bucket => 'pics.lasposadress.com.ua',
     :s3_credentials => {

@@ -11,6 +11,8 @@ gem 'json'
 
 gem 'haml'
 gem 'activeadmin'
+gem "paperclip", "~> 2.4"
+gem 'sass-rails', "  ~> 3.1.0"
 
 #group :production do
 #  gem 'therubyracer-heroku', '0.8.1.pre3'
@@ -19,7 +21,6 @@ gem 'activeadmin'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', "  ~> 3.1.0"
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
 end

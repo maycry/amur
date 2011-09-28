@@ -159,6 +159,7 @@ DEPENDENCIES
   activeadmin
   aws-s3
   coffee-rails (~> 3.1.0)
+  execjs
   haml
   jquery-rails
   json

@@ -96,6 +96,7 @@ GEM
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
       mime-types
+    pg (0.11.0-x86-mingw32)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.2)
@@ -162,6 +163,7 @@ DEPENDENCIES
   jquery-rails
   json
   paperclip (~> 2.4)
+  pg
   rails (= 3.1.0)
   sass-rails (~> 3.1.0)
   sqlite3

@@ -1,0 +1,336 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,#header {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+	color: black;
+}
+a:hover{
+	color:gray;
+}
+body{
+	background: url(header_pattern.png) repeat-x center top;
+	width: 100%;
+	height: 180px;
+	font:16px/1.5 Tahoma, Arial, Helvetica, sans-serif;
+	min-width: 980px;
+}
+h1{
+	font-size: 3em;
+	font-weight: normal;
+	line-height: 2.5em;
+	display: inline;
+}
+
+hr{
+	height: 1px;
+    width: 100%;
+    color: #e9e9e9;
+    border-width: 0px 0px 1px 0px;
+    border-bottom-style: solid;
+    border-color: #e9e9e9;
+}
+
+
+/*Шапка*/
+#header{
+	margin: 0 auto;
+	width: 100%;
+	height: 144px;
+}
+#header__logo{
+	margin-left: -73px;
+	margin-top: 28px;
+	position: absolute;
+	left: 50%;
+}
+#header__infomenu {
+    background: transparent url(info_menu_right.png) no-repeat scroll top right;
+    color: #444;
+    display: block;
+    padding: 0px 12px 7px 0px;
+    text-decoration: none;
+    float: right;
+    margin-top: 21px;
+    margin-right: 50px;
+    display:inline;
+}
+#header__infomenu ul {
+    list-style: none;
+    background: transparent url(info_menu_left.png) no-repeat;
+    display: block;
+    line-height: 14px;
+    padding: 3px 4px 7px 17px;
+}
+#header__infomenu ul li {
+    display: inline;
+    font-size: 0.813em;
+    margin:0 4px 0;
+}
+
+#header__telefon {
+    background: transparent url(telefon_right.png) no-repeat scroll top right;
+    display: block;
+    float: left;
+    padding: 0px 12px 7px 0px;
+    text-decoration: none;
+    margin-top: 36px;
+    margin-left: 50px;
+    display:inline;
+}
+
+#header__telefon span {
+    background: transparent url(telefon_left.png) no-repeat;
+    display: block;
+    line-height: 14px;
+    padding: 13px 6px 17px 20px;
+    font-weight: bold;
+}
+
+
+/* Меню */
+#menu{
+	width:100%;
+	text-align: center;
+	font-size: 0.75em;
+	
+	width: 980px;
+	height: auto;
+	clear: both;
+	margin: 0 auto;
+}
+#menu ul{
+	list-style: none;
+}
+#menu ul li{
+	display: inline;
+	letter-spacing: 0.165em;
+	color: #999999;
+	cursor: default;
+	margin-left: -5px;
+}
+#menu ul li a{
+	text-decoration: none;
+}
+#menu ul li a:hover{
+	text-decoration: underline;
+}
+#menu ul li span{
+	padding:0 0.525em 0 0.525em;
+}
+
+
+/* Выбор типа продукта */
+#typechooser{
+	margin-top:23px;
+	text-align: center;
+	width: 100%;
+}
+#typechooser ul{
+	list-style: none;
+}
+#typechooser ul li{
+	display: inline;
+	font-size: 0.75em;
+	margin: 0 11px;
+}
+.typechooser__active {
+    background: transparent url(type_button_right.png) no-repeat scroll top right;
+    padding: 2px 9px 7px 0px !important;
+    padding: 0px 5px 7px 0px ;
+    text-decoration: none;
+    color: #999;
+    cursor: default;
+}
+
+.typechooser__active span {
+    background: transparent url(type_button_left.png) no-repeat;
+    line-height: 14px;
+    padding: 2px 2px 17px 12px;
+}
+
+
+#wrap{
+	margin: 0 auto;
+	width: 980px;
+	margin-top: 30px;
+}
+/* Продукты */
+#products{
+	width: 100%;
+}
+.product{
+	width: 180px;
+	height:312px;
+	font-size: 0.875em;
+	float: left;
+	margin: 0 7px 10px;
+	
+}
+.product .image{
+	display: block;
+	height:280px;
+	line-height: 560px;
+	margin-bottom:5px;
+}
+.product a img{
+}
+.product a{
+	color: #999999;
+	font-size: 0.813em;
+}
+
+
+/*Пагинация*/
+#pagination{
+	text-align: center;
+	clear:both;
+	padding-top: 10px;
+	height: 120px;
+	font-size: 0.875em;
+}
+#pagination ul{
+	list-style: none;
+	line-height: 2em;
+}
+#pagination ul li{
+	display: inline;	
+	margin: 0 2px;
+}
+.pagination__active {
+    background: transparent url(paginate_right.png) no-repeat scroll top right;
+    padding: 1px 9px 7px 0px !important;
+    padding: 0px 5px 7px 0px ;
+    text-decoration: none;
+    color: #999;
+    cursor: default;
+    margin: 0 !important;
+}
+
+.pagination__active span {
+    background: transparent url(paginate_left.png) no-repeat;
+    line-height: 14px;
+    padding: 1px 0px 17px 9px;
+}
+.instock{
+	background: url(instock.png);
+	width: 84px;
+	height: 20px;
+	position: absolute;
+	margin-top:235px;
+	margin-left: 99px;
+}
+.instock_onproduct{
+	background: url(instock.png);
+	width: 84px;
+	height: 20px;
+	position: absolute;
+	margin-top:455px;
+	margin-left: 264px;
+}
+
+
+/*Пагинация*/
+#productblock{
+	padding-top: 30px;
+	width: 100%;
+}
+#product__image{
+	width: 460px;
+	float: left;
+	height: 500px;
+}
+#product__info{
+	width: 489px;
+	height: 500px;
+	margin-left: 488px;
+}
+#product__image_stack{
+	width: 88px;
+	float: left;
+	margin-right: 10px;
+}
+#product__image_stack img{
+	margin-bottom: 4px;
+}
+.articul{
+	margin-left: 10px;
+	font-size: 0.875em;
+}
+a#buy_button{
+	background: url(buy.png);
+	width: 109px;
+	height: 58px;
+	display: block;
+	margin-left: 120px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+a:hover#buy_button{
+	background: url(buy.png) 0px 58px;
+}
+a:active#buy_button{
+	background: url(buy.png);
+}
+#price{
+	font-size: 1.125em;
+	font-weight: bold;
+	margin-top: 26px;
+	display: block;
+	float: left;
+	margin-left: 4px;
+}
+.uah{
+	font-size: 0.875em;
+	font-weight: normal;
+	padding-left: 3px;
+}
+#table_about{
+	width: 100%;
+	font-size: 0.813em;
+	margin-top: 30px;
+}
+#table_about tbody tr td p{
+	padding-bottom: 6px;
+}
+.table_label{
+	color: #999999;
+	width: 80px;
+}

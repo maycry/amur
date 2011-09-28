@@ -1,0 +1,14 @@
+development:
+  access_key_id: AKIAJZAYIMTC47C4LRPA
+  secret_access_key: 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
+  bucket: pics.lasposadress.com.ua
+
+test:
+  access_key_id: AKIAJZAYIMTC47C4LRPA
+  secret_access_key: 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
+  bucket: pics.lasposadress.com.ua
+
+production:
+  access_key_id: AKIAJZAYIMTC47C4LRPA
+  secret_access_key: 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
+  bucket: pics.lasposadress.com.ua

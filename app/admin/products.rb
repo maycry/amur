@@ -6,7 +6,12 @@ ActiveAdmin.register Product do
   controller do
     def new
       @product = Product.new
-      @productimages = 3.times { @product.productimages.build }
+      @productimages = 4.times { @product.productimages.build }
+    end
+    
+    def edit
+      @product = Product.find(params[:id])
+      @productimages = 4.times { @product.productimages.build }
     end
   end
   

@@ -14,6 +14,8 @@ gem 'aws-s3'
 
 group :production do
   #gem 'therubyracer-heroku', '0.8.1.pre3'
+  gem 'execjs'
+  gem 'therubyracer'
   gem 'pg'
 end
 group :assets do

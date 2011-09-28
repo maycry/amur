@@ -10,7 +10,7 @@
 	  <%= f.input :released_at,:as => :date %>
 	<% end %>
 	<%= f.inputs :name => "Author", :for => :productimages do |author_form| %>
-      <%= author_form.input :image_file_name, :as => :file %>
+      <%= author_form.input :image, :as => :file %>
     <% end %>
 	<%= f.buttons :commit %>
 

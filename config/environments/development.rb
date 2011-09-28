@@ -1,7 +1,7 @@
 Amur::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  Paperclip.options[:command_path] = "c:/Program Files (x86)/ImageMagick-6.7.2-Q16/"
+  Paperclip.options[:command_path] = "C:/Program Files/ImageMagick-6.7.2-Q16/"
   # In the development environment your application's code is reloaded on
   # every request.  This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -24,7 +24,7 @@ Amur::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
 
   # Do not compress assets
-  config.assets.compress = true
+  config.assets.compress = false
 
   # Expands the lines which load the assets
   config.assets.debug = true

@@ -4,15 +4,15 @@
     #product__image
       #product__image_stack
         -@product.productimages.each do|productimage|
-          = link_to image_tag(productimage.image, :style => "width:88px"), "#" 
+          =link_to image_tag(productimage.image, :style => "width:88px"), "#" 
             
-      = image_tag "../images/instock.png", :class => "instock_onproduct", :alt => "В наличии" if @product.in_stock
-      = image_tag @product.productimages.first.image, :style => "width:346px"
+      =image_tag "../images/instock.png", :class => "instock_onproduct", :alt => "В наличии" if @product.in_stock
+      =link_to image_tag(@product.productimages.first.image, :style => "width:346px"), @product.productimages.first.image.to_s, :class => "zoomer"
     #product__info
-      %h1= @product.category.name
+      %h1=@product.category.name
       %span.articul
         Артикул
-        = @product.articul
+        =@product.articul
       %hr
       %span#price
         =@product.price

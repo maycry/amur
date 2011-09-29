@@ -11,9 +11,13 @@ class ProductsController < ApplicationController
     else
       @products = Product.where("type_id = ? AND category_id = ?", Type.find_by_alias(params[:type_alias]).id, Category.find_by_alias(params[:category_alias]).id)
     end
+    
+    
   end
   
   def show
-    
+    @product = Product.find_by_articul(params[:articul])
+    @pages = Page.all
+    @types = Type.all
   end
 end

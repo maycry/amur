@@ -6,6 +6,7 @@ Amur::Application.routes.draw do
   #resources :products
   
   match ':type_alias/:category_alias' => 'products#index', :as => :products
+  match ':type_alias/:category_alias/:articul' => 'products#show', :as => :show_product
 
 
   # The priority is based upon order of creation:

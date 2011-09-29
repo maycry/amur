@@ -1,0 +1,24 @@
+=render 'layouts/header'
+#wrap
+  #productblock
+    #product__image
+      #product__image_stack
+        -@product.productimages.each do|productimage|
+          = link_to image_tag(productimage.image, :style => "width:88px"), "#" 
+            
+      = image_tag "../images/instock.png", :class => "instock_onproduct", :alt => "В наличии" if @product.in_stock
+      = image_tag @product.productimages.first.image, :style => "width:346px"
+    #product__info
+      %h1= @product.category.name
+      %span.articul
+        Артикул
+        = @product.articul
+      %hr
+      %span#price
+        =@product.price
+        %span.uah грн
+        
+      =link_to "","#", :id => "buy_button", :onclick => "this.blur();"
+      %hr
+      =@product.about.html_safe
+        

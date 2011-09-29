@@ -266,7 +266,7 @@ hr{
 	width: 84px;
 	height: 20px;
 	position: absolute;
-	margin-top:455px;
+	margin-top:435px;
 	margin-left: 264px;
 }
 
@@ -285,6 +285,9 @@ hr{
 	width: 489px;
 	height: 500px;
 	margin-left: 488px;
+}
+#product__info hr{
+	margin-left: -15px;
 }
 #product__image_stack{
 	width: 88px;

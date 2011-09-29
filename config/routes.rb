@@ -3,7 +3,10 @@ Amur::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  resources :products
+  #resources :products
+  
+  match ':type_alias/:category_alias' => 'products#index', :as => :products
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

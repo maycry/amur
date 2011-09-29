@@ -1,5 +1,10 @@
 #typechooser
   %ul
     -@categoties.each do |category|
-      %li= link_to category.name
+      -if current_category == category.alias
+        %li.typechooser__active
+          %span= category.name
+      -else
+        %li= link_to category.name, products_path(current_type, category.alias)
+      
   %hr

@@ -153,6 +153,11 @@ hr{
 }
 #menu ul li span{
 	padding:0 0.525em 0 0.525em;
+	color: black;
+}
+.active{
+	text-decoration: underline !important;
+	color: #999999;
 }
 
 

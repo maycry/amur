@@ -14,7 +14,7 @@ gem 'aws-s3'
 
 group :production do
   gem 'execjs'
-  gem 'therubyracer'
+  #gem 'therubyracer'
   gem 'pg'
 end
 group :assets do

@@ -143,7 +143,6 @@ hr{
 	letter-spacing: 0.165em;
 	color: #999999;
 	cursor: default;
-	margin-left: -5px;
 }
 #menu ul li a{
 	text-decoration: none;
@@ -261,14 +260,6 @@ hr{
 	margin-top:245px;
 	margin-left: 99px;
 }
-.instock_onproduct{
-	background: url(instock.png);
-	width: 84px;
-	height: 20px;
-	position: absolute;
-	margin-top:435px;
-	margin-left: 264px;
-}
 
 
 /*Пагинация*/
@@ -280,6 +271,16 @@ hr{
 	width: 460px;
 	float: left;
 	height: 500px;
+	position: relative;
+}
+.instock_onproduct{
+	background: url(instock.png);
+	width: 84px;
+	height: 20px;
+	position: absolute;
+	margin-left: 264px;
+	bottom: 60px;
+	z-index: 130;
 }
 #product__info{
 	width: 489px;

@@ -1,10 +1,12 @@
 #typechooser
   %ul
-    -@categoties.each do |category|
+    -list=""
+    -@categories.each do |category|
       -if current_category == category.alias
-        %li.typechooser__active
-          %span= category.name
+        -list += "<li class='typechooser__active'><span>#{category.name}</span></li>"
       -else
-        %li= link_to category.name, products_path(current_type, category.alias)
+        -list += "<li>#{link_to category.name, products_path(current_type, category.alias)}</li>"
+        
+    =list.html_safe
       
   %hr

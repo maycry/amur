@@ -12,9 +12,7 @@
    filter: alpha(opacity = 80);
    color: #333;
    font-size: 12px;
-   font-family: Tahoma;
    text-decoration: none;
-   border: 1px solid #CCC;
    background-color: white;
    padding: 8px;
    text-align:center;
@@ -40,7 +38,6 @@
 	filter: alpha(opacity = 60);
 	z-index:120;
 	position:absolute;
-	border:1px solid #CCC;
   z-index:101;
   cursor:crosshair;
 }
@@ -70,11 +67,10 @@
 }
 .zoomWrapper{
 	position:relative;
-	border:1px solid #999;
   z-index:110;
 }
 .zoomWrapperTitle{
-	display:block;
+	display:none;
 	background:#999;
 	color:#FFF;
 	height:18px;

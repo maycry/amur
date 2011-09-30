@@ -7,6 +7,9 @@
 //= require jquery
 //= require jquery.jqzoom-core
 
-$(document).ready(function(){  
-    $('.zoomer').jqzoom();  
+$(document).ready(function(){ 
+	var options = {
+		title: false
+	};
+    $('.zoomer').jqzoom(options);  
 }); 

@@ -9,15 +9,16 @@
 #menu
   %ul
     -i=0
+    -list=""
     -@types.each do |type|
       -i+=1
-      %li
-        -if current_type == type.alias
-          = link_to_unless_current type.name.mb_chars.upcase.to_s, products_path(type.alias, "all"), :class => "active" if is_empty(type)
-          -if i!=@types.size && is_empty(type)
-            %span ·
-        -else
-          = link_to_unless_current type.name.mb_chars.upcase.to_s, products_path(type.alias, "all") if is_empty(type)
-          -if i!=@types.size && is_empty(type)
-            %span ·
-       
+      -list += "<li>"
+      -if current_type == type.alias
+        -list += link_to_unless_current type.name.mb_chars.upcase.to_s, products_path(type.alias, "all"), :class => "active"
+        -if i!=@types.size
+          -list += "<span>·</span>"
+      -else
+        -list += link_to_unless_current type.name.mb_chars.upcase.to_s, products_path(type.alias, "all")
+        -if i!=@types.size
+          -list += "<span>·</span>"
+    =list.html_safe

@@ -4,4 +4,5 @@ class Product < ActiveRecord::Base
   has_many :productimages, :dependent => :destroy
   
   accepts_nested_attributes_for :productimages, :allow_destroy => true
+ 
 end

@@ -5,6 +5,10 @@ Amur::Application.routes.draw do
 
   #resources :products
   
+  
+  
+  delete ':id/:image_id' => 'products#destroy_image', :as => :destroy_image
+  
   match ':type_alias/:category_alias' => 'products#index', :as => :products
   match ':type_alias/:category_alias/:articul' => 'products#show', :as => :show_product
 

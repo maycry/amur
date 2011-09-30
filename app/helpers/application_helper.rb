@@ -14,4 +14,5 @@ module ApplicationHelper
     parts_count = url_parts.size
     url_parts[1]
   end
+
 end

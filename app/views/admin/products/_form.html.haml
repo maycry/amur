@@ -2,19 +2,20 @@
   = f.inputs do 
     = f.input :type,       :as => :select,  :collection => Type.find(:all)
     = f.input :category,   :as => :select,  :collection => Category.find(:all) 
-    = f.input :articul 
+    = f.input :articul
     = f.input :price 
     = f.input :in_stock,   :as => :boolean 
-    = f.input :is_active,  :as => :boolean 
+    = f.input :is_active,  :as => :boolean
     = f.input :about,      :as => :text 
-    = f.input :released_at,:as => :date 
-  
-  = f.inputs :name => "Author", :for => :productimages do |productimage| 
+    = f.input :released_at,:as => :date
+    
+  = f.inputs :name => "Add image", :for => :productimages do |productimage| 
     -if productimage.object.new_record?
       = productimage.input :image, :as => :file 
       
-  = f.inputs :name => "Author", :for => :productimages do |productimage| 
+  = f.inputs :name => "Image", :for => :productimages do |productimage| 
     -unless productimage.object.new_record?
       = link_to( image_tag(productimage.object.image.url(:thumb)), productimage.object.image.url(:original))
+      = link_to 'Delete', destroy_image_path(@product.id, productimage.object.id), :method => :delete
     
   = f.buttons :commit

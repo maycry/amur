@@ -1,17 +1,22 @@
 class ProductsController < ApplicationController
+    
+  def home
+    redirect_to "/weddingdresses/all"
+  end
+  
   def index
-    @type_alias = Type.find_by_alias(params[:type_alias])    
-    @pages = Page.all
-    @types = current_types
-    @categories = current_categories
+    @type_alias ||= Type.find_by_alias(params[:type_alias]).id 
+    @pages ||= Page.all
+    @types ||= Type.has_products
+    @categories ||= current_categories
     
     if params[:category_alias] == "all"
-      @products = Product.find_all_by_type_id(@type_alias.id)
+      @products = Product.find_all_by_type_id(@type_alias)
     elsif params[:category_alias] == "in_stock"
-      @products = Product.where("type_id = ? AND in_stock = ?", @type_alias.id, true)
+      @products = Product.where("type_id = ? AND in_stock = ?", @type_alias, true)
     else
-      category_alias = Category.find_by_alias(params[:category_alias])
-      @products = Product.where("type_id = ? AND category_id = ?", @type_alias.id, category_alias.id) 
+      category_alias = Category.find_by_alias(params[:category_alias]).id
+      @products = Product.where("type_id = ? AND category_id = ?", @type_alias, category_alias) 
     end
     add_instock
     
@@ -30,32 +35,18 @@ class ProductsController < ApplicationController
   end
   
   private
-  
-  def current_types
-    Type.find_by_sql("SELECT DISTINCT types.* FROM types INNER JOIN products ON products.type_id = types.id")
-  end
+
   def current_categories
-    Category.find_by_sql("SELECT DISTINCT categories.* FROM categories INNER JOIN products ON products.category_id = categories.id WHERE products.type_id = #{@type_alias.id}")
+    Category.find_by_sql("SELECT DISTINCT categories.* FROM categories INNER JOIN products ON products.category_id = categories.id WHERE products.type_id = #{@type_alias}") 
   end
   
   def add_instock
-    if has_instock?
+    if @products.any?(&:in_stock)
       cat_instock = Category.new
       cat_instock.alias = "in_stock"
       cat_instock.name = "В наличии"
       @categories << cat_instock
     end
-  end
-  
-  def has_instock?
-    instbool = false
-    @products.each do |product|
-      if product.in_stock 
-        instbool = true
-        break
-      end
-    end
-    instbool
   end
   
 end

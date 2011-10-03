@@ -1,4 +1,6 @@
 Amur::Application.routes.draw do
+  resources :orders
+
   get "pages/show"
 
   ActiveAdmin.routes(self)
@@ -12,6 +14,7 @@ Amur::Application.routes.draw do
   delete ':id/:image_id' => 'products#destroy_image',              :as => :destroy_image
   
   match ':type_alias/:category_alias' => 'products#index',         :as => :products
+  match ':type_alias/:category_alias/:articul/new' => 'orders#new', :as => :product_order
   match ':type_alias/:category_alias/:articul' => 'products#show', :as => :show_product
   match ':alias' => 'pages#show',                                  :as => :page
 

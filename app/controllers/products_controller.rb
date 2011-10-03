@@ -41,7 +41,7 @@ class ProductsController < ApplicationController
   end
   
   def add_instock
-    if @products.any?(&:in_stock)
+    if Product.where("type_id = ?", @type_alias).any?(&:in_stock)
       cat_instock = Category.new
       cat_instock.alias = "in_stock"
       cat_instock.name = "В наличии"

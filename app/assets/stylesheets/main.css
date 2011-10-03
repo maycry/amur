@@ -81,7 +81,7 @@ hr{
 	left: 50%;
 }
 #header__infomenu {
-    background: transparent url(info_menu_right.png) no-repeat scroll top right;
+    background: transparent url(main_imgs.png) no-repeat scroll 100% -126px ;
     color: #444;
     display: block;
     padding: 0px 12px 7px 0px;
@@ -93,7 +93,7 @@ hr{
 }
 #header__infomenu ul {
     list-style: none;
-    background: transparent url(info_menu_left.png) no-repeat;
+    background: transparent url(main_imgs.png) no-repeat 0 -180px;
     display: block;
     line-height: 14px;
     padding: 3px 4px 7px 17px;
@@ -105,7 +105,7 @@ hr{
 }
 
 #header__telefon {
-    background: transparent url(telefon_right.png) no-repeat scroll top right;
+    background: transparent url(main_imgs.png) no-repeat scroll 100% -83px ;
     display: block;
     float: left;
     padding: 0px 12px 7px 0px;
@@ -116,7 +116,7 @@ hr{
 }
 
 #header__telefon span {
-    background: transparent url(telefon_left.png) no-repeat;
+    background: transparent url(main_imgs.png) no-repeat -217px 0;
     display: block;
     line-height: 14px;
     padding: 13px 6px 17px 20px;
@@ -175,7 +175,7 @@ hr{
 	margin: 0 11px;
 }
 .typechooser__active {
-    background: transparent url(type_button_right.png) no-repeat scroll top right;
+    background: transparent url(main_imgs.png) no-repeat scroll 100%  -20px;
     padding: 2px 9px 7px 0px !important;
     padding: 0px 5px 7px 0px ;
     text-decoration: none;
@@ -184,7 +184,7 @@ hr{
 }
 
 .typechooser__active span {
-    background: transparent url(type_button_left.png) no-repeat;
+    background: transparent url(main_imgs.png) no-repeat;
     line-height: 14px;
     padding: 2px 2px 17px 12px;
 }

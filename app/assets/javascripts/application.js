@@ -6,10 +6,5 @@
 //
 //= require jquery
 //= require jquery.jqzoom-core
+//= require products
 
-$(document).ready(function(){ 
-	var options = {
-		title: false
-	};
-    $('.zoomer').jqzoom(options);  
-}); 

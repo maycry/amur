@@ -3,7 +3,7 @@
   #header__infomenu
     %ul
       -@pages.each do |page|
-        %li= link_to page.name
+        %li= link_to page.name, page_path(page.alias)
   #header__telefon
     %span 093 346-97-96
 #menu

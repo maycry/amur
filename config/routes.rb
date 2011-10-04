@@ -11,12 +11,13 @@ Amur::Application.routes.draw do
   
   
   
-  delete ':id/:image_id' => 'products#destroy_image',              :as => :destroy_image
+  delete ':id/:image_id' => 'products#destroy_image',                 :as => :destroy_image
   
-  match ':type_alias/:category_alias' => 'products#index',         :as => :products
-  match ':type_alias/:category_alias/:articul/new' => 'orders#new', :as => :product_order
-  match ':type_alias/:category_alias/:articul' => 'products#show', :as => :show_product
-  match ':alias' => 'pages#show',                                  :as => :page
+  match ':type_alias/:category_alias' => 'products#index',            :as => :products
+  match ':type_alias/:category_alias/:articul/order' => 'orders#new', :as => :product_order
+   match 'order_complete' => 'orders#complete'
+  match ':type_alias/:category_alias/:articul' => 'products#show',    :as => :show_product
+  match ':alias' => 'pages#show',                                     :as => :page
 
 
   # The priority is based upon order of creation:

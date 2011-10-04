@@ -12,10 +12,10 @@ ActiveAdmin.register Product do
     column :in_stock
     column :released_at
     column "Type", :sortable => :type_id do |product|
-      product.type.name if product.type.name !=nil
+      product.type.name unless product.type.nil?
     end
     column "Brand", :sortable => :category_id do |product|
-      product.category.name if product.category.name !=nil
+      product.category.name unless product.category.nil?
     end
     default_actions
   end
@@ -30,7 +30,7 @@ ActiveAdmin.register Product do
       @product.is_active ||= true
       @product.type_id ||= Type.first.id
       @product.category_id ||= Category.first.id
-      @product.about ||= "<table cellpadding='0' cellspacing='0' summary="" id='table_about'>
+      @product.about ||= "<table cellpadding='0' cellspacing='0' id='table_about'>
       <tbody>
       <tr><td class='table_label'>Материал</td><td><p>атлас, тафта, шифон, органза, шелк,белый, цвет слоновой кости, шампанского</p></td></tr>
       <tr><td class='table_label'>Цвет</td><td ><p>белый, цвет слоновой кости, шампанского</p></td></tr>
@@ -45,7 +45,7 @@ ActiveAdmin.register Product do
     def create
       @product = Product.new(params[:product])
       if @product.save
-        redirect_to admin_products_path, :notice => "Product #{@product.category.name} #{@product.articul} was created"
+        redirect_to admin_products_path, :notice => "Product #{@product.articul unless @product.articul.nil?} was created"
       end
     end
       

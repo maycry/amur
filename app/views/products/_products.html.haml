@@ -3,7 +3,7 @@
     -if product.is_active
       .product
         = image_tag "../images/instock.png", :class => "instock", :alt => "В наличии" if product.in_stock
-        = link_to image_tag(product.productimages.first.image.url(:thumb), :alt => product.articul ), show_product_path(current_type, current_category, product.articul), :class => "image"
+        = link_to image_tag(product.productimages.first.image.url(:thumb), :alt => product.articul), show_product_path(current_type, current_category, product.articul), :class => "image"
         .meta
           = product.category.name
-          = link_to product.articul
+          = link_to product.articul, show_product_path(current_type, current_category, product.articul)

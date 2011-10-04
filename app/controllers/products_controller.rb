@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   end
   
   def index
-    @type_alias ||= Type.find_by_alias(params[:type_alias]).id 
+    @type_alias = Type.find_by_alias(params[:type_alias]).id 
     @pages ||= Page.all
     @types ||= Type.has_products
     @categories ||= current_categories
@@ -24,8 +24,8 @@ class ProductsController < ApplicationController
   
   def show
     @product = Product.find_by_articul(params[:articul])
-    @pages = Page.all
-    @types = current_types
+    @pages ||= Page.all
+    @types ||= Type.has_products
   end
   
   def destroy_image
@@ -41,7 +41,7 @@ class ProductsController < ApplicationController
   end
   
   def add_instock
-    if @products.any?(&:in_stock)
+    if Product.where("type_id = ?", @type_alias).any?(&:in_stock)
       cat_instock = Category.new
       cat_instock.alias = "in_stock"
       cat_instock.name = "В наличии"

@@ -18,7 +18,7 @@
         =@product.price
         %span.uah грн
         
-      =link_to "","#", :id => "buy_button", :onclick => "this.blur();"
+      =link_to "", product_order_path(current_type, current_category, current_articul), :id => "buy_button", :onclick => "this.blur();"
       %hr
       =@product.about.html_safe
         

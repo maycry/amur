@@ -3,5 +3,10 @@
     = f.input :product_id, :as => :hidden
     = f.input :name,  :label => "Имя"
     = f.input :phone, :label => "Телефон"
+    %hr
+    = f.input :bust, :as => :number,  :label => "Обхват груди"
+    = f.input :waist, :label => "талии"
+    = f.input :heaps, :label => "бедер"
+    = f.input :waittofloor, :label => "Длина от талии до пола на каблуках"
     
   = f.buttons :commit

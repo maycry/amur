@@ -6,5 +6,4 @@ ActiveAdmin.register Order do
     column :created_at
     default_actions
   end
-  
 end

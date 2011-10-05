@@ -2,11 +2,14 @@
   = f.inputs do 
     = f.input :product_id, :as => :hidden
     = f.input :name,  :label => "Имя"
-    = f.input :phone, :label => "Телефон"
-    %hr
-    = f.input :bust, :as => :number,  :label => "Обхват груди"
-    = f.input :waist, :label => "талии"
-    = f.input :heaps, :label => "бедер"
-    = f.input :waittofloor, :label => "Длина от талии до пола на каблуках"
-    
-  = f.buttons :commit
+    = f.input :phone, :label => "Телефон", :hint => "Телефон будет использован только для подтверждения заказа"
+  %hr
+  = f.inputs :class => "size" do 
+    = f.input :bust,  :label => "Обхват груди", :hint => "см"
+    = f.input :waist, :label => "талии", :hint => "см"
+    = f.input :heaps, :label => "бедер", :hint => "см"
+    = f.input :waisttofloor, :label => "Длина от талии до пола на каблуках", :hint => "см"
+  %hr
+  = f.buttons do
+    = f.commit_button ""
+  %hr

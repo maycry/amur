@@ -3,3 +3,4 @@ $(document).ready ->
     title: false
     
   $('.zoomer').jqzoom options
+ 

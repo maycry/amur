@@ -1,15 +1,14 @@
-= semantic_form_for @order do |f| 
-  = render "validation", :target => @order
+= semantic_form_for @order, :validate => true do |f| 
   = f.inputs do 
     = f.input :product_id, :as => :hidden
     = f.input :name,  :label => "Имя"
-    = f.input :phone, :label => "Телефон", :hint => "Телефон будет использован только для подтверждения заказа"
+    = f.input :phone, :label => "Телефон"
   %hr
   = f.inputs :class => "size" do 
-    = f.input :bust,  :label => "Обхват груди", :hint => "см"
-    = f.input :waist, :label => "талии", :hint => "см"
-    = f.input :heaps, :label => "бедер", :hint => "см"
-    = f.input :waisttofloor, :label => "Длина от талии до пола на каблуках", :hint => "см"
+    = f.input :bust,  :label => "Обхват груди, см"
+    = f.input :waist, :label => "талии"
+    = f.input :heaps, :label => "бедер"
+    = f.input :waisttofloor, :label => "Длина от талии до пола на каблуках"
   %hr
   = f.buttons do
     = f.commit_button ""

@@ -7,9 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<%= render 'layouts/header'%>
+<%= render 'layouts/header'%>
+
+<% flash.each do |key, msg| %>
+  <%= content_tag :div, msg, :id => key %>
+<% end %>
 
 <%= yield %>
-
+<div id="pagination"> 
+  <%= paginate @products unless @products.nil? %>
+</div> 
 </body>
 </html>

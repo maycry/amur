@@ -1,7 +1,6 @@
 #wrap
   #productblock
     #product__orderimage          
-      =image_tag "../images/instock.png", :class => "instock_onproduct", :alt => "В наличии" if @product.in_stock
       =image_tag @product.productimages.first.image, :style => "width:346px"
     #product__order
       %h2 

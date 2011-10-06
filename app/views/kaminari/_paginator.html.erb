@@ -1,0 +1,18 @@
+<%# The container tag
+  - available local variables
+    current_page:  a page object for the currently displayed page
+    num_pages:     total number of pages
+    per_page:      number of items to fetch per page
+    remote:        data-remote
+    paginator:     the paginator that renders the pagination tags inside
+-%>
+
+<%= paginator.render do -%>
+  <hr>
+  <ul>
+    <% each_page do |page| -%>
+        <li <%= 'class=pagination__active' if page.current? %>>
+        	<%=page_tag(page)%>
+      <% end -%>
+  </ul>
+<% end -%>

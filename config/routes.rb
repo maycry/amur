@@ -15,7 +15,7 @@ Amur::Application.routes.draw do
   
   match ':type_alias/:category_alias' => 'products#index',            :as => :products
   match ':type_alias/:category_alias/:articul/order' => 'orders#new', :as => :product_order
-   match 'order_complete' => 'orders#complete'
+  match 'order_complete' => 'orders#complete'
   match ':type_alias/:category_alias/:articul' => 'products#show',    :as => :show_product
   match ':alias' => 'pages#show',                                     :as => :page
 

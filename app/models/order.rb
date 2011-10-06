@@ -1,10 +1,12 @@
 class Order < ActiveRecord::Base
   belongs_to :product
-  attr_accessible :name, :phone, :bust, :waist, :heaps, :waisttofloor
+  attr_accessible :name, :phone, :bust, :waist, :heaps, :waisttofloor, :product_id
   
   validates :name, 
-            :presence => true, 
-            :length => { :maximum => 50 }, 
-            :format => { :with => /\A[a-zA-Zа-яА-Я]+\z/, :message => "Only letters allowed" }
+            :presence => true,
+            :length => { :maximum => 50 }
+            
+  validates :phone, 
+            :presence => true
 
 end

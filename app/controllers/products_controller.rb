@@ -11,15 +11,14 @@ class ProductsController < ApplicationController
     @categories ||= current_categories
     
     if params[:category_alias] == "all"
-      @products = Product.find_all_by_type_id(@type_alias)
+      @products = Product.order('released_at').where('type_id =?',@type_alias).page(params[:page])
     elsif params[:category_alias] == "in_stock"
-      @products = Product.where("type_id = ? AND in_stock = ?", @type_alias, true)
+      @products = Product.order('released_at').where("type_id = ? AND in_stock = ?", @type_alias, true).page(params[:page])
     else
       category_alias = Category.find_by_alias(params[:category_alias]).id
-      @products = Product.where("type_id = ? AND category_id = ?", @type_alias, category_alias) 
+      @products = Product.order('released_at').where("type_id = ? AND category_id = ?", @type_alias, category_alias).page(params[:page]) 
     end
     add_instock
-    
   end
   
   def show

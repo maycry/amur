@@ -9,7 +9,11 @@ class OrdersController < ApplicationController
   
   def create
     @order = Order.new(params[:order])
-    redirect_to :action =>'complete' if @order.save! 
+    if @order.save
+      redirect_to :action =>'complete' 
+    else
+      render product_order_path(:product_id => @order.product_id)
+    end
   end
   
   def complete

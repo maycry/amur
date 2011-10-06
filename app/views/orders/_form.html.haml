@@ -1,4 +1,5 @@
 = semantic_form_for @order do |f| 
+  = render "validation", :target => @order
   = f.inputs do 
     = f.input :product_id, :as => :hidden
     = f.input :name,  :label => "Имя"

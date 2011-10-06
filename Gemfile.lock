@@ -119,6 +119,8 @@ GEM
       activesupport (= 3.1.0)
       bundler (~> 1.0)
       railties (= 3.1.0)
+    rails-dev-tweaks (0.5.1)
+      rails (~> 3.1.0)
     railties (3.1.0)
       actionpack (= 3.1.0)
       activesupport (= 3.1.0)
@@ -171,6 +173,7 @@ DEPENDENCIES
   paperclip (~> 2.4)
   pg
   rails (= 3.1.0)
+  rails-dev-tweaks (~> 0.5.1)
   russian
   sass-rails (~> 3.1.0)
   sqlite3

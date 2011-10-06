@@ -14,10 +14,11 @@ gem 'aws-s3'
 gem 'client_side_validations', '3.0.5' 
 gem 'russian'
 gem 'kaminari'
+gem 'rails-dev-tweaks', '~> 0.5.1'
 
 group :production do
   gem 'execjs'
-  gem 'therubyracer'
+  #gem 'therubyracer'
   gem 'pg'
 end
 group :assets do

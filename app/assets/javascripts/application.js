@@ -7,5 +7,6 @@
 //= require jquery
 //= require jquery.jqzoom-core
 //= require products
+//= require orders
 //= require rails.validations
 

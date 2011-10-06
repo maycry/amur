@@ -331,12 +331,19 @@ fieldset.size ol li p{
 #howto{
 	width: 200px;
 	height: 270px;
-	background-color: #999999;
+	background-color: #fff;
 	position: relative;
 	float: right;
 	display: inline;
 	margin-top: -410px;
 	margin-right: 90px;
+	background: url(maneken.png);
+}
+#arrows{
+	background: url(maneken_arrows.png);
+	background-position: 0px 0px;
+	width: 200px;
+	height: 270px;
 }
 
 

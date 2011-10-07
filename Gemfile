@@ -14,7 +14,7 @@ gem 'aws-s3'
 gem 'client_side_validations', '3.0.5' 
 gem 'russian'
 gem 'kaminari'
-gem 'rails-dev-tweaks', '~> 0.5.1'
+gem 'redcarpet'
 
 group :production do
   gem 'execjs'
@@ -24,6 +24,9 @@ end
 group :assets do
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
+end
+group :development do
+  gem 'rails-dev-tweaks', '~> 0.5.1'
 end
 
 gem 'jquery-rails'

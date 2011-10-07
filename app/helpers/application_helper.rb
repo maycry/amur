@@ -28,5 +28,10 @@ module ApplicationHelper
     parts_count = url_parts.size
     url_parts[2]
   end
+  
+  def markdown(text)
+    options = [:hard_wrap, :filter_html, :autolink, :no_intraemphasis, :fenced_code, :gh_blockcode, :tables]
+    raw Redcarpet.new(text, *options).to_html
+  end
 
 end

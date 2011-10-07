@@ -17,7 +17,8 @@ class OrdersController < ApplicationController
     @order = Order.new(params[:order])
     if @order.save
       redirect_to "/weddingdresses/all", :notice => "Ваш заказ принят. Мы скоро перезвоним для уточнения деталей."
-      OrderMailer.order_complete(@order).deliver
+      OrderMailer.order_complete(@order, "byorickq@gmail.com").deliver
+      OrderMailer.order_complete(@order, "bykova.catia@gmail.com").deliver
       session[:name] ||= @order.name
       session[:phone] ||= @order.phone
       session[:bust] ||= @order.bust

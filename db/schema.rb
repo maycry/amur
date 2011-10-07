@@ -53,16 +53,16 @@ ActiveRecord::Schema.define(:version => 20111007120616) do
   end
 
   create_table "orders", :force => true do |t|
-    t.string    "name"
-    t.string    "phone"
-    t.string    "bust"
-    t.string    "waist"
-    t.string    "heaps"
-    t.string    "waisttofloor"
-    t.text      "comments"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.integer   "product_id"
+    t.string   "name"
+    t.string   "phone"
+    t.string   "bust"
+    t.string   "waist"
+    t.string   "heaps"
+    t.string   "waisttofloor"
+    t.text     "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "product_id"
   end
 
   create_table "pages", :force => true do |t|

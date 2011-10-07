@@ -107,6 +107,7 @@ hr{
 #header__infomenu ul li {
     display: inline;
     font-size: 0.813em;
+    color: #999999;
     margin:0 4px 0;
 }
 

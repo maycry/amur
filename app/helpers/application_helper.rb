@@ -33,5 +33,9 @@ module ApplicationHelper
     options = [:hard_wrap, :filter_html, :autolink, :no_intraemphasis, :fenced_code, :gh_blockcode, :tables]
     raw Redcarpet.new(text, *options).to_html
   end
+  
+  def title(page_title)
+    content_for(:title) { page_title }
+  end
 
 end

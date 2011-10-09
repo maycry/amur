@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
     @categories ||= current_categories
     
     if params[:category_alias] == "all"
-      @products = Product.includes(:productimages).order('released_at').where('type_id =?',@type_alias).page(params[:page])
+      @products = Product.includes(:productimages).order('released_at DESC').where('type_id =?',@type_alias).page(params[:page])
     elsif params[:category_alias] == "in_stock"
       @products = Product.includes(:productimages).order('released_at').where("type_id = ? AND in_stock = ?", @type_alias, true).page(params[:page])
     else
@@ -23,6 +23,7 @@ class ProductsController < ApplicationController
   
   def show
     @product = Product.find_by_articul(params[:articul])
+    @next_product = Product.order('released_at').where("id > ? AND type_id = ?", @product.id, Type.find_by_alias(params[:type_alias]).id ).first 
     @pages ||= Page.all
     @types ||= Type.has_products
   end

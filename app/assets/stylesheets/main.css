@@ -388,7 +388,7 @@ fieldset.size ol li p{
 }
 
 
-/*Пагинация*/
+/*Продукты*/
 #productblock{
 	padding-top: 30px;
 	width: 100%;
@@ -455,6 +455,16 @@ a:active#buy_button{
 	font-size: 0.875em;
 	font-weight: normal;
 	padding-left: 3px;
+}
+#next_dress{
+	float: right;
+	margin-top: -61px;
+	color: #b2b2b2;
+	font-size: 0.75em;
+	padding-right: 30px;
+}
+a:hover#next_dress{
+	color: #ccc;
 }
 #table_about{
 	width: 100%;

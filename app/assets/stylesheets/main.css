@@ -197,7 +197,7 @@ hr{
 	margin: 0 11px;
 }
 .typechooser__active {
-    background: transparent url(main_imgs.png) no-repeat scroll 100%  -20px;
+    background: transparent url(main_imgs.png) no-repeat scroll 100%  -152px;
     padding: 2px 9px 7px 0px !important;
     padding: 0px 5px 7px 0px ;
     text-decoration: none;
@@ -388,7 +388,7 @@ fieldset.size ol li p{
 }
 
 
-/*Продукты*/
+/*Продукт*/
 #productblock{
 	padding-top: 30px;
 	width: 100%;
@@ -412,9 +412,17 @@ fieldset.size ol li p{
 	width: 489px;
 	height: 500px;
 	margin-left: 488px;
+	padding-top:1em;
 }
 #product__info hr{
 	margin-left: -15px;
+}
+#product__info hr.marg{
+	margin-top: 30px;
+}
+#product__info h1{
+	margin-right: 7px;
+	line-height: 1.5em;
 }
 #product__image_stack{
 	width: 88px;
@@ -425,8 +433,9 @@ fieldset.size ol li p{
 	margin-bottom: 4px;
 }
 .articul{
-	margin-left: 10px;
+	margin-left: 3px;
 	font-size: 0.875em;
+	white-space: nowrap;
 }
 a#buy_button{
 	background: url(buy.png);

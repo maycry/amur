@@ -46,5 +46,7 @@ module Amur
     config.assets.version = '1.0'
 
     config.i18n.default_locale = :ru
+
+    config.i18n.locale = :ru
   end
 end

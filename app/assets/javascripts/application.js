@@ -9,4 +9,3 @@
 //= require products
 //= require orders
 //= require rails.validations
-

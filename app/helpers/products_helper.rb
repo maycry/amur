@@ -3,7 +3,7 @@ module ProductsHelper
     true
   end
   
-  def get_iamge_size
+  def get_image_size
     if @image_width > 346
       "width:346px"
     else

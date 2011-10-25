@@ -24,6 +24,7 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find_by_articul(params[:articul])
     @next_product = Product.order('id DESC').where("id < ? AND type_id = ?", @product.id, Type.find_by_alias(params[:type_alias]).id ).first 
+    @previos_product = Product.order('id').where("id > ? AND type_id = ?", @product.id, Type.find_by_alias(params[:type_alias]).id ).first 
     @pages ||= Page.all
     @types ||= Type.has_products
     

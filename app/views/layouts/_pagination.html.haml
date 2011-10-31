@@ -1,8 +1,2 @@
-#pagination
-  %hr
-  %ul
-    %li.pagination__active
-      %span 1
-    %li= link_to 2
-    %li= link_to 3
-    %li= link_to 4
+-if !@products.nil?
+	#pagination= paginate @products

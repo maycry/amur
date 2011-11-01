@@ -84,6 +84,16 @@ hr{
 	margin-top: 28px;
 	position: absolute;
 	left: 50%;
+	width: 147px;
+	height:80px;
+	overflow: hidden;
+	background-image: url(../images/header_logo.png);
+}
+a#header__logo {
+	background-position:0 0;
+}
+a:hover#header__logo {
+	background-position:0 -80px;
 }
 #header__infomenu {
     background: transparent url(main_imgs.png) no-repeat scroll 100% -126px ;

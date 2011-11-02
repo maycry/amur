@@ -1,0 +1,406 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ele",
+				"elements"
+			],
+			[
+				"no",
+				"none"
+			],
+			[
+				"back",
+				"background: background-position: position"
+			],
+			[
+				"hei",
+				"height"
+			],
+			[
+				"mod",
+				"mod: module .. ClassMethods .. end"
+			],
+			[
+				"ba",
+				"background: background-attachment: scroll/fixed"
+			],
+			[
+				"wi",
+				"white: white-space: normal/pre/nowrap"
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"re",
+				"redirect_to"
+			],
+			[
+				"red",
+				"redirect_to"
+			],
+			[
+				"cla",
+				"cla: Create controller class"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "config/environment.rb",
+			"settings":
+			{
+				"buffer_size": 148,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 538,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 220.0,
+		"selected_items":
+		[
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"rails",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"ma",
+				"Set Syntax: Markdown"
+			],
+			[
+				"haml",
+				"Set Syntax: Ruby Haml"
+			],
+			[
+				"rail",
+				"Set Syntax: Ruby on Rails"
+			]
+		],
+		"width": 378.0
+	},
+	"console":
+	{
+		"height": 129.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/output.txt",
+		"/C/Users/Admin/amur/public/favicon.ico",
+		"/C/Users/Admin/amur/app/views/layouts/application.html.erb",
+		"/C/Users/Admin/amur/Gemfile",
+		"/C/Users/Admin/AppData/Roaming/Sublime Text 2/Packages/User/Global.sublime-settings",
+		"/C/Users/Admin/amur/config/environments/production.rb",
+		"/C/Users/Admin/amur/app/assets/stylesheets/main.css",
+		"/C/Users/Admin/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Admin/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Admin/AppData/Roaming/Sublime Text 2/Packages/Default/Global.sublime-settings",
+		"/C/Users/Admin/amur/config/environments/development.rb",
+		"/C/Users/Admin/amur/app/views/layouts/_header.html.haml",
+		"/C/Users/Admin/amur/app/views/products/show.html.haml",
+		"/C/Users/Admin/amur/app/helpers/products_helper.rb",
+		"/C/Users/Admin/amur/app/assets/javascripts/jquery.jqzoom-core.js",
+		"/C/Users/Admin/amur/app/helpers/application_helper.rb",
+		"/C/Users/Admin/amur/app/views/layouts/_pagination.html.haml",
+		"/C/Users/Admin/amur/config/environment.rb",
+		"/C/Users/Admin/amur/lib/assets/s3_cache_control.rb",
+		"/C/Users/Admin/amur/verstka/main.css",
+		"/C/Users/Admin/amur/app/assets/stylesheets/jquery.jqzoom.css",
+		"/C/Users/Admin/Desktop/e2_distr_v2451/back/highlight.init.js",
+		"/C/Users/Admin/amur/config/application.rb",
+		"/C/Users/Admin/Desktop/e2_distr_v2451/back/ga.js",
+		"/C/Users/Admin/Desktop/e2_distr_v2451/back/htaccess",
+		"/C/Users/Admin/Desktop/e2_distr_v2451/back/content.tmpl.php",
+		"/C/Users/Admin/amur/app/models/order.rb",
+		"/C/Users/Admin/amur/app/models/productimage.rb",
+		"/C/Users/Admin/amur/app/models/product.rb",
+		"/C/Users/Admin/amur/verstka/product.html",
+		"/C/Users/Admin/amur/app/controllers/jpeg.rb",
+		"/C/Users/Admin/amur/app/controllers/products_controller.rb",
+		"/C/Users/Admin/AppData/Roaming/Sublime Text 2/Packages/Default/Add Line Before.sublime-macro",
+		"/C/Users/Admin/AppData/Roaming/Sublime Text 2/Packages/Ruby/#!;usr;local;bin;ruby-w.sublime-snippet",
+		"/C/Users/Admin/AppData/Roaming/Sublime Text 2/Packages/User/clone_line.sublime-macro",
+		"/C/Sites/test/Hello world.rb",
+		"/C/Users/Admin/amur/app/models/test.rb",
+		"/C/Users/Admin/AppData/Roaming/Sublime Text 2/Packages/User/Base File.sublime-settings",
+		"/C/Users/Admin/AppData/Roaming/Sublime Text 2/Packages/Default/Base File.sublime-settings",
+		"/C/Users/Admin/amur/app/admin/products.rb",
+		"/C/Users/Admin/AppData/Roaming/Sublime Text 2/Packages/Default/Distraction Free.sublime-settings",
+		"/C/Users/Admin/AppData/Roaming/Sublime Text 2/Packages/Ruby/application_code-..-(app).sublime-snippet",
+		"/C/Users/Admin/amur/app/controllers/orders_controller.rb"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ruby",
+			"hello",
+			"document",
+			"application",
+			"stylesheet_link_tag",
+			"push",
+			"gaq",
+			"tab",
+			"buy.png",
+			"main_imgs",
+			"main_imgs.png",
+			"header_logo",
+			"main_imgs",
+			"gif",
+			"ctrl+shift+c",
+			"ctrl+shift",
+			"tag",
+			"code",
+			"ouput",
+			"tabTrigger",
+			"currentFile",
+			"index",
+			"\\",
+			"/",
+			"print",
+			"column",
+			"is_active",
+			"    column :is_active\n",
+			"end",
+			"fieldset",
+			"aside",
+			"article"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"../images/buy.png",
+			"../images/main_imgs.png"
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "config/environment.rb",
+					"settings":
+					{
+						"buffer_size": 148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 538,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								303,
+								303
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"envir",
+				"config/environment.rb"
+			],
+			[
+				"applhtml",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"appcatiohtml",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"appl",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"main",
+				"app/assets/stylesheets/main.css"
+			],
+			[
+				"productio",
+				"config/environments/production.rb"
+			],
+			[
+				"deve",
+				"config/environments/development.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"applhe",
+				"app/helpers/application_helper.rb"
+			],
+			[
+				"head",
+				"app/views/layouts/_header.html.haml"
+			],
+			[
+				"ge",
+				"Gemfile"
+			],
+			[
+				"pro",
+				"app/models/product.rb"
+			],
+			[
+				"prod",
+				"verstka/product.html"
+			],
+			[
+				"tes",
+				"app/models/test.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/Users/Admin/Desktop/123.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 204.0,
+	"status_bar_visible": true
+}

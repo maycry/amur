@@ -15,10 +15,11 @@ gem 'client_side_validations', '3.0.5'
 gem 'russian'
 gem 'kaminari'
 gem 'redcarpet'
+gem 'image_size'
 
 group :production do
   gem 'execjs'
-  gem 'therubyracer'
+  #gem 'therubyracer'
   gem 'pg'
 end
 group :assets do

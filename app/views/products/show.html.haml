@@ -6,7 +6,7 @@
         -@product.productimages.each do|productimage|
           =link_to image_tag(productimage.image.url(:thumb), :style => "width:88px"), "javascript:void(0);", :rel => "{gallery: 'gal', smallimage: '#{productimage.image}',largeimage:'#{productimage.image}'}"
             
-      =image_tag "../images/instock.png", :class => "instock_onproduct", :alt => "В наличии" if @product.in_stock
+      =image_tag "../images/instock.png", :class => "instock_onproduct", :alt => "В наличии", :style => get_instock_margin if @product.in_stock
       =link_to image_tag(@product.productimages.first.image, :style => get_image_size), @product.productimages.first.image.to_s, :class => "zoomer", :rel => "gal"
     #product__info
       %h1=@product.category.name

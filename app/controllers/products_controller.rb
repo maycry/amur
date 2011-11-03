@@ -29,6 +29,7 @@ class ProductsController < ApplicationController
     @types ||= Type.has_products
 
     @image_width = @product.productimages.width
+    @image_height = @product.productimages.height
   end
   
   def destroy_image
@@ -36,6 +37,10 @@ class ProductsController < ApplicationController
     @productimage.destroy
     redirect_to(edit_admin_product_path(params[:id]))
   end
+
+
+
+  
   
   private
 

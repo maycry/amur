@@ -8,6 +8,7 @@ ActiveAdmin.register Product do
     end
     column :articul
     column :price
+    column :discount
     column :is_active
     column :in_stock
     column :released_at

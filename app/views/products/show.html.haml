@@ -14,8 +14,12 @@
         Артикул
         =@product.articul
       %hr.marg
+      #discount
+        - unless @product.discount==0
+          =number_to_currency @product.price, :precision => 0, :unit => ""
+          грн
       %span#price
-        =number_to_currency @product.price, :precision => 0, :unit => ""
+        =number_to_currency @product.price-@product.discount, :precision => 0, :unit => ""
         %span.uah грн
         
       =link_to "", product_order_path(current_type, current_category, current_articul, :product_id => @product.id), :id => "buy_button", :onclick => "this.blur();"

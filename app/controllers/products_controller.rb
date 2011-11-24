@@ -6,28 +6,21 @@ class ProductsController < ApplicationController
   
   def index
     @type_alias = Type.find_by_alias(params[:type_alias]).id 
-    @pages ||= Page.all
-    @types ||= Type.has_products
-    @categories ||= current_categories
-    
-    if params[:category_alias] == "all"
-      @products = Product.includes(:productimages).order('id DESC').where('type_id =?',@type_alias).page(params[:page])
-    elsif params[:category_alias] == "in_stock"
-      @products = Product.includes(:productimages).order('id DESC').where("type_id = ? AND in_stock = ?", @type_alias, true).page(params[:page])
-    else
-      category_alias = Category.find_by_alias(params[:category_alias]).id
-      @products = Product.includes(:productimages).order('id DESC').where("type_id = ? AND category_id = ?", @type_alias, category_alias).page(params[:page]) 
-    end
+    @pages = Page.all
+    @types = Type.has_products
+    @categories = Category.current_categories(@type_alias)
+    @products = Product.get_products_of_current_type(params[:category_alias], @type_alias, params[:page])
     add_instock
   end
   
   def show
     @product = Product.find_by_articul(params[:articul])
-    @next_product = Product.order('id DESC').where("id < ? AND type_id = ?", @product.id, Type.find_by_alias(params[:type_alias]).id ).first 
-    @previos_product = Product.order('id').where("id > ? AND type_id = ?", @product.id, Type.find_by_alias(params[:type_alias]).id ).first 
-    @pages ||= Page.all
-    @types ||= Type.has_products
+    @next_product = Product.next_product(@product.id, Type.find_by_alias(params[:type_alias]).id)
+    @previos_product = Product.previos_product(@product.id, Type.find_by_alias(params[:type_alias]).id)
+    @pages = Page.all
+    @types = Type.has_products
 
+    # find image width and height
     @image_width = @product.productimages.width
     @image_height = @product.productimages.height
   end
@@ -40,13 +33,8 @@ class ProductsController < ApplicationController
 
 
 
-  
-  
-  private
 
-  def current_categories
-    Category.find_by_sql("SELECT DISTINCT categories.* FROM categories INNER JOIN products ON products.category_id = categories.id WHERE products.type_id = #{@type_alias}") 
-  end
+  private
   
   def add_instock
     if Product.where("type_id = ?", @type_alias).any?(&:in_stock)

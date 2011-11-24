@@ -451,8 +451,8 @@ a#buy_button{
 	height: 58px;
 	display: block;
 	margin-left: 120px;
-	margin-top: 20px;
 	margin-bottom: 20px;
+	margin-top: -5px;
 }
 a:hover#buy_button{
 	background: url(../images/buy.png) 0px 58px;
@@ -460,10 +460,16 @@ a:hover#buy_button{
 a:active#buy_button{
 	background: url(../images/buy.png);
 }
+#discount{
+	margin:20px 0 0 3px;
+	color:#dc5bc8;
+	text-decoration: line-through;
+	height:20px;
+}
 #price{
 	font-size: 1.125em;
 	font-weight: bold;
-	margin-top: 26px;
+	margin-top: 6px;
 	display: block;
 	float: left;
 	margin-left: 4px;

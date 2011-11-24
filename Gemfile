@@ -19,7 +19,7 @@ gem 'image_size'
 
 group :production do
   gem 'execjs'
-  gem 'therubyracer'
+  #gem 'therubyracer'
   gem 'pg'
 end
 group :assets do

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111007120616) do
+ActiveRecord::Schema.define(:version => 20111124132920) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer   "resource_id",   :null => false
@@ -53,16 +53,16 @@ ActiveRecord::Schema.define(:version => 20111007120616) do
   end
 
   create_table "orders", :force => true do |t|
-    t.string   "name"
-    t.string   "phone"
-    t.string   "bust"
-    t.string   "waist"
-    t.string   "heaps"
-    t.string   "waisttofloor"
-    t.text     "comments"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "product_id"
+    t.string    "name"
+    t.string    "phone"
+    t.string    "bust"
+    t.string    "waist"
+    t.string    "heaps"
+    t.string    "waisttofloor"
+    t.text      "comments"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "product_id"
   end
 
   create_table "pages", :force => true do |t|
@@ -75,7 +75,7 @@ ActiveRecord::Schema.define(:version => 20111007120616) do
     t.string    "illustration_file_name"
     t.string    "illustration_content_type"
     t.integer   "illustration_file_size"
-    t.datetime  "illustration_updated_at"
+    t.timestamp "illustration_updated_at"
   end
 
   create_table "productimages", :force => true do |t|
@@ -89,16 +89,17 @@ ActiveRecord::Schema.define(:version => 20111007120616) do
   end
 
   create_table "products", :force => true do |t|
-    t.string    "articul"
-    t.decimal   "price"
-    t.integer   "type_id"
-    t.integer   "category_id"
-    t.boolean   "is_active"
-    t.boolean   "in_stock"
-    t.text      "about"
-    t.date      "released_at"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "articul"
+    t.decimal  "price"
+    t.integer  "type_id"
+    t.integer  "category_id"
+    t.boolean  "is_active"
+    t.boolean  "in_stock"
+    t.text     "about"
+    t.date     "released_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.decimal  "discount",    :default => 0.0
   end
 
   create_table "types", :force => true do |t|

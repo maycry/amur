@@ -13,6 +13,7 @@ class Productimage < ActiveRecord::Base
     	ImageSize.new(fh.read).w
     end
   end
+  
   def self.height
     open(self.first.image.url, "rb") do |fh|
       ImageSize.new(fh.read).h

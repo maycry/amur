@@ -71,7 +71,39 @@
 			"file": "app/admin/products.rb",
 			"settings":
 			{
-				"buffer_size": 1830,
+				"buffer_size": 1851,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/admin/products/_form.html.haml",
+			"settings":
+			{
+				"buffer_size": 1022,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/products/show.html.haml",
+			"settings":
+			{
+				"buffer_size": 1667,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/main.css",
+			"settings":
+			{
+				"buffer_size": 8663,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 554,
 				"line_ending": "Unix"
 			}
 		}
@@ -132,6 +164,10 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Admin/amur/db/migrate/20110927102309_create_productimages.rb",
+		"/C/Users/Admin/amur/db/migrate/20111124132539_destroy_discount_in_product.rb",
+		"/C/Users/Admin/amur/db/migrate/20111124132920_add_discount_to_product.rb",
+		"/C/Users/Admin/amur/db/migrate/20111124123327_add_discount_to_product.rb",
 		"/C/Users/Admin/amur/config/environments/development.rb",
 		"/C/Users/Admin/amur/app/views/products/show.html.haml",
 		"/C/Users/Admin/amur/app/models/productimage.rb",
@@ -253,7 +289,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -268,8 +304,8 @@
 						"selection":
 						[
 							[
-								50,
-								50
+								437,
+								437
 							]
 						],
 						"settings":
@@ -280,7 +316,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 114.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -290,15 +326,15 @@
 					"file": "app/admin/products.rb",
 					"settings":
 					{
-						"buffer_size": 1830,
+						"buffer_size": 1851,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1570,
-								1570
+								648,
+								648
 							]
 						],
 						"settings":
@@ -308,7 +344,116 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 240.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/admin/products/_form.html.haml",
+					"settings":
+					{
+						"buffer_size": 1022,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								320,
+								320
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/products/show.html.haml",
+					"settings":
+					{
+						"buffer_size": 1667,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								848,
+								848
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/assets/stylesheets/main.css",
+					"settings":
+					{
+						"buffer_size": 8663,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8323,
+								8323
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 7259.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 554,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								279,
+								279
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -358,6 +503,18 @@
 		"selected_items":
 		[
 			[
+				"main",
+				"app/assets/stylesheets/main.css"
+			],
+			[
+				"pro",
+				"app/admin/products.rb"
+			],
+			[
+				"add",
+				"db/migrate/20111124123327_add_discount_to_product.rb"
+			],
+			[
 				"prorb",
 				"app/admin/products.rb"
 			],
@@ -391,14 +548,6 @@
 			],
 			[
 				"",
-				"app/models/product.rb"
-			],
-			[
-				"main",
-				"app/assets/stylesheets/main.css"
-			],
-			[
-				"pro",
 				"app/models/product.rb"
 			],
 			[
@@ -476,6 +625,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 194.0,
+	"side_bar_width": 305.0,
 	"status_bar_visible": true
 }

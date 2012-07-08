@@ -4,12 +4,12 @@
 		"selected_items":
 		[
 			[
-				"type",
-				"type_id"
+				"pro",
+				"products"
 			],
 			[
-				"pro",
-				"productimages"
+				"type",
+				"type_id"
 			],
 			[
 				"ele",
@@ -60,29 +60,50 @@
 	"buffers":
 	[
 		{
+			"file": "app/controllers/products_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1316,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/admin/products.rb",
+			"settings":
+			{
+				"buffer_size": 1851,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/admin/products/_form.html.haml",
+			"settings":
+			{
+				"buffer_size": 1022,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/products/show.html.haml",
+			"settings":
+			{
+				"buffer_size": 1667,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/main.css",
+			"settings":
+			{
+				"buffer_size": 8663,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "Gemfile",
 			"settings":
 			{
-				"buffer_size": 555,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "class ProductsController < ApplicationController  \n\n  def home\n    redirect_to \"/weddingdresses/all\"\n  end\n  \n  def index\n    @type_alias = Type.find_by_alias(params[:type_alias]).id \n    @pages ||= Page.all\n    @types ||= Type.has_products\n    @categories ||= current_categories\n    \n    if params[:category_alias] == \"all\"\n      @products = Product.includes(:productimages).order('id DESC').where('type_id =?',@type_alias).page(params[:page])\n    elsif params[:category_alias] == \"in_stock\"\n      @products = Product.includes(:productimages).order('id DESC').where(\"type_id = ? AND in_stock = ?\", @type_alias, true).page(params[:page])\n    else\n      category_alias = Category.find_by_alias(params[:category_alias]).id\n      @products = Product.includes(:productimages).order('id DESC').where(\"type_id = ? AND category_id = ?\", @type_alias, category_alias).page(params[:page]) \n    end\n    add_instock\n  end\n  \n  def show\n    @product = Product.find_by_articul(params[:articul])\n    @next_product = Product.order('id DESC').where(\"id < ? AND type_id = ?\", @product.id, Type.find_by_alias(params[:type_alias]).id ).first \n    @previos_product = Product.order('id').where(\"id > ? AND type_id = ?\", @product.id, Type.find_by_alias(params[:type_alias]).id ).first \n    @pages ||= Page.all\n    @types ||= Type.has_products\n\n    @image_width = @product.productimages.width\n  end\n  \n  def destroy_image\n    @productimage = Productimage.find(params[:image_id])\n    @productimage.destroy\n    redirect_to(edit_admin_product_path(params[:id]))\n  end\n\n\n\n  \n  \n  private\n\n  def current_categories\n    Category.find_by_sql(\"SELECT DISTINCT categories.* FROM categories INNER JOIN products ON products.category_id = categories.id WHERE products.type_id = #{@type_alias}\") \n  end\n  \n  def add_instock\n    if Product.where(\"type_id = ?\", @type_alias).any?(&:in_stock)\n      cat_instock = Category.new\n      cat_instock.alias = \"in_stock\"\n      cat_instock.name = \"В наличии\"\n      @categories << cat_instock\n    end\n  end\n  \nend",
-			"file": "app/controllers/products_controller.rb",
-			"file_size": 2015,
-			"file_write_time": 129647236990183428,
-			"settings":
-			{
-				"buffer_size": 2013,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/product.rb",
-			"settings":
-			{
-				"buffer_size": 246,
+				"buffer_size": 554,
 				"line_ending": "Unix"
 			}
 		}
@@ -90,9 +111,17 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 220.0,
+		"height": 375.0,
 		"selected_items":
 		[
+			[
+				"show",
+				"Snippet: assert_throws(..) { .. }"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
 			[
 				"html",
 				"Set Syntax: HTML"
@@ -118,7 +147,7 @@
 				"Set Syntax: Ruby on Rails"
 			]
 		],
-		"width": 378.0
+		"width": 458.0
 	},
 	"console":
 	{
@@ -135,22 +164,28 @@
 	},
 	"file_history":
 	[
-		"/C/Users/Admin/amur/app/models/productimage.rb",
-		"/C/Users/Admin/amur/app/helpers/products_helper.rb",
-		"/E/My Dropbox/ruby test/image-size.rb",
+		"/C/Users/Admin/amur/db/migrate/20110927102309_create_productimages.rb",
+		"/C/Users/Admin/amur/db/migrate/20111124132539_destroy_discount_in_product.rb",
+		"/C/Users/Admin/amur/db/migrate/20111124132920_add_discount_to_product.rb",
+		"/C/Users/Admin/amur/db/migrate/20111124123327_add_discount_to_product.rb",
+		"/C/Users/Admin/amur/config/environments/development.rb",
 		"/C/Users/Admin/amur/app/views/products/show.html.haml",
+		"/C/Users/Admin/amur/app/models/productimage.rb",
+		"/C/Users/Admin/amur/app/models/product.rb",
+		"/C/Users/Admin/amur/app/models/category.rb",
+		"/C/Users/Admin/amur/app/helpers/products_helper.rb",
+		"/C/Users/Admin/amur/Gemfile",
+		"/C/Users/Admin/amur/app/assets/stylesheets/main.css",
+		"/E/My Dropbox/ruby test/image-size.rb",
 		"/C/Users/Admin/amur/config/environment.rb",
 		"/C/output.txt",
 		"/C/Users/Admin/amur/public/favicon.ico",
 		"/C/Users/Admin/amur/app/views/layouts/application.html.erb",
-		"/C/Users/Admin/amur/Gemfile",
 		"/C/Users/Admin/AppData/Roaming/Sublime Text 2/Packages/User/Global.sublime-settings",
 		"/C/Users/Admin/amur/config/environments/production.rb",
-		"/C/Users/Admin/amur/app/assets/stylesheets/main.css",
 		"/C/Users/Admin/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
 		"/C/Users/Admin/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
 		"/C/Users/Admin/AppData/Roaming/Sublime Text 2/Packages/Default/Global.sublime-settings",
-		"/C/Users/Admin/amur/config/environments/development.rb",
 		"/C/Users/Admin/amur/app/views/layouts/_header.html.haml",
 		"/C/Users/Admin/amur/app/assets/javascripts/jquery.jqzoom-core.js",
 		"/C/Users/Admin/amur/app/helpers/application_helper.rb",
@@ -164,7 +199,6 @@
 		"/C/Users/Admin/Desktop/e2_distr_v2451/back/htaccess",
 		"/C/Users/Admin/Desktop/e2_distr_v2451/back/content.tmpl.php",
 		"/C/Users/Admin/amur/app/models/order.rb",
-		"/C/Users/Admin/amur/app/models/product.rb",
 		"/C/Users/Admin/amur/verstka/product.html",
 		"/C/Users/Admin/amur/app/controllers/jpeg.rb",
 		"/C/Users/Admin/amur/app/controllers/products_controller.rb",
@@ -196,6 +230,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"includes(:productimages).order('id DESC')",
+			"params[:page]",
+			"@type_alias",
+			"type_alias",
+			"params[:category_alias]",
+			"params",
+			"width",
+			"}",
 			"ruby",
 			"hello",
 			"document",
@@ -247,15 +289,155 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "app/controllers/products_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1316,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								437,
+								437
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 114.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/admin/products.rb",
+					"settings":
+					{
+						"buffer_size": 1851,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								648,
+								648
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/admin/products/_form.html.haml",
+					"settings":
+					{
+						"buffer_size": 1022,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								320,
+								320
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/products/show.html.haml",
+					"settings":
+					{
+						"buffer_size": 1667,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								848,
+								848
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/assets/stylesheets/main.css",
+					"settings":
+					{
+						"buffer_size": 8663,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8323,
+								8323
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 7259.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "Gemfile",
 					"settings":
 					{
-						"buffer_size": 555,
+						"buffer_size": 554,
 						"regions":
 						{
 						},
@@ -269,61 +451,6 @@
 						"settings":
 						{
 							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/controllers/products_controller.rb",
-					"settings":
-					{
-						"buffer_size": 2013,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								646,
-								646
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 624.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/models/product.rb",
-					"settings":
-					{
-						"buffer_size": 246,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								195,
-								195
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -376,20 +503,56 @@
 		"selected_items":
 		[
 			[
-				"pro",
-				"app/models/product.rb"
+				"main",
+				"app/assets/stylesheets/main.css"
 			],
 			[
-				"producima",
-				"app/models/productimage.rb"
+				"pro",
+				"app/admin/products.rb"
+			],
+			[
+				"add",
+				"db/migrate/20111124123327_add_discount_to_product.rb"
+			],
+			[
+				"prorb",
+				"app/admin/products.rb"
 			],
 			[
 				"show",
 				"app/views/products/show.html.haml"
 			],
 			[
+				"prohelp",
+				"app/helpers/products_helper.rb"
+			],
+			[
+				"procon",
+				"app/controllers/products_controller.rb"
+			],
+			[
+				"proima",
+				"app/models/productimage.rb"
+			],
+			[
+				"category",
+				"app/models/category.rb"
+			],
+			[
 				"prohe",
 				"app/helpers/products_helper.rb"
+			],
+			[
+				"proim",
+				"app/models/productimage.rb"
+			],
+			[
+				"",
+				"app/models/product.rb"
+			],
+			[
+				"producima",
+				"app/models/productimage.rb"
 			],
 			[
 				"prodco",
@@ -410,10 +573,6 @@
 			[
 				"appl",
 				"app/views/layouts/application.html.erb"
-			],
-			[
-				"main",
-				"app/assets/stylesheets/main.css"
 			],
 			[
 				"productio",
@@ -466,6 +625,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 204.0,
+	"side_bar_width": 305.0,
 	"status_bar_visible": true
 }

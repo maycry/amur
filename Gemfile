@@ -11,12 +11,11 @@ gem 'activeadmin'
 gem "paperclip", "~> 2.4"
 gem 'sass-rails', "  ~> 3.1.0"
 gem 'aws-s3'
-gem 'client_side_validations', '3.0.5' 
+gem 'client_side_validations'
 gem 'russian'
 gem 'kaminari'
 gem 'redcarpet'
 gem 'image_size'
-gem 'rake'
 
 group :production do
   gem 'execjs'

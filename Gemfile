@@ -16,6 +16,7 @@ gem 'russian'
 gem 'kaminari'
 gem 'redcarpet'
 gem 'image_size'
+gem 'rake'
 
 group :production do
   gem 'execjs'

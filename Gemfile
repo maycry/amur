@@ -9,7 +9,7 @@ gem 'json'
 gem 'haml'
 gem 'activeadmin'
 gem "paperclip", "~> 2.4"
-gem 'sass-rails', "  ~> 3.1.0"
+gem 'sass-rails', "~> 3.1.0"
 gem 'aws-s3'
 gem 'client_side_validations'
 gem 'russian'

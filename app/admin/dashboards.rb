@@ -14,6 +14,27 @@ ActiveAdmin::Dashboards.build do
   #       end
   #     end
   #   end
+  section "Recent Products" do
+    table_for Product.order("released_at desc").limit(5) do
+      column "Image" do |product|
+        image_tag product.productimages.first.image.url(:thumb), :height => "50px" if product.productimages.first !=nil
+      end
+      column :name do |product|
+        link_to product.articul, [:admin, product]
+      end
+      column :released_at
+    end
+    strong { link_to "View All Products", admin_products_path }
+  end
+
+  section "Recent Orders" do
+    table_for Order.order("created_at desc").limit(5) do
+      column :phone
+      column :name
+      column :created_at
+    end
+    strong { link_to "View All Orders", admin_orders_path }
+  end
   
   # == Render Partial Section
   # The block is rendered within the context of the view, so you can

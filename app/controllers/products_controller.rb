@@ -1,7 +1,9 @@
 class ProductsController < ApplicationController  
 
   def home
-    redirect_to "/weddingdresses/all"
+    #redirect_to "/weddingdresses/all"
+    @pages = Page.all
+    @types = Type.has_products
   end
   
   def index

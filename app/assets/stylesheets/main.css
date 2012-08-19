@@ -216,7 +216,7 @@ a:hover#header__logo {
     cursor: default;
 }
 .typechooser__active span {
-    background: transparent url(../images/main_imgs.png) no-repeat;
+    background: transparent url(../assets/main_imgs.png) no-repeat;
     line-height: 14px;
     padding: 2px 2px 17px 12px;
 }
@@ -227,6 +227,109 @@ a:hover#header__logo {
 }
 
 
+/*Инфоблок*/
+.info{
+	width: 940px;
+	height: auto;
+	background-color: #fae7f3;
+	color: #3c3c3c;
+	font-size: 14px;
+	line-height: 22px;
+	padding: 15px 20px;
+	text-align: center;
+	position: relative;
+	margin-top: 50px;
+}
+.slider{
+	margin-top: 40px;
+	width: 980px;
+	background-color: #f2f2f2;
+	height:300px;
+	position: relative;
+}
+.slider-inner-container{
+	overflow: hidden;
+	width: 980px;
+	height:300px;
+}
+.slider-inner-wrapper{
+	width: 3000px;
+}
+.slider-controller-right{
+	width: 50px;
+	height: 50px;
+	background-color: gray;
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	margin-top: -25px;
+	cursor: pointer;	
+}
+.slider-controller-left{
+	width: 50px;
+	height: 50px;
+	background-color: gray;
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	margin-left: -50px;
+	cursor: pointer;
+}
+.slide{
+	background-color: red;
+	width: 980px;
+	height: 300px;
+	float: left;
+}
+.blue{
+	background-color: blue;
+}
+.corners .tl{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: transparent url(../assets/circle.png) 90% 90% no-repeat;
+	left: 0;
+	top: 0;
+}
+.corners .tr{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: transparent url(../assets/circle.png) 10% 90% no-repeat;
+	margin-left: -15px;
+	left: 100%;
+	top: 0;
+
+}
+.corners .bl{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: transparent url(../assets/circle.png) 90% 10% no-repeat;
+	margin-top: -15px;
+	left: 0;
+	top: 100%;
+
+}
+.corners .br{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: transparent url(../assets/circle.png) 10% 10% no-repeat;
+	margin-left: -15px;
+	margin-top: -15px;
+	left: 100%;
+	top: 100%;
+}
+.under-block-shadow{
+	position: absolute;
+	width: 950px;
+	height: 30px;
+	background: transparent url(../assets/under_block_shadow.png) 50% 0 no-repeat;
+	top: 100%;
+	left: 15px;
+}
 
 /* Продукты */
 #products{

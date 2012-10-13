@@ -1,11 +1,51 @@
 .slider.corners
 	.slider-controller-right
 	.slider-controller-left
+	.slider-viewer-center
+		%span.active
+		%span
+		%span
 	.slider-inner-container
 		.slider-inner-wrapper
-			.slide
-			.slide.blue
-			.slide
+			.slide{ :style => "background: url(../images/photo_main_1_front.png) no-repeat 100% 0", :data =>{ :style => "background: url(../images/photo_main_1_back.png) no-repeat 100% 0", :name => "Показать оригинальные фото"}}
+				.slide-photo-controller
+					%a{ :href => "#"} Показать платье в жизни
+				.slide-text
+					%h3 
+						%a{ :href => "/weddingdresses/all/Orsinis"}Платье Rosa Clara Orsinis
+					%p.text-main Платье в стиле русалка из атласа, шифона и органзы. Пояс из кристаллов Сваровски.
+					%p.text-about 
+						%em Срок изготовления: 
+						%strong 3—4 недели
+					%p.text-about 
+						%em Цена: 
+						%strong 4 550 грн 
+			.slide{ :style => "background: url(../images/photo_main_2_front.png) no-repeat 100% 0", :data =>{ :style => "background: url(../images/photo_main_2_back.png) no-repeat 100% 0", :name => "Показать оригинальные фото"}}
+				.slide-photo-controller
+					%a{ :href => "#"} Показать платье в жизни
+				.slide-text
+					%h3 
+						%a{ :href => "/weddingdresses/all/PR%20026"}Платье Pronovias PR-026
+					%p.text-main Платье в стиле русалка из атласа, шифона и органзы.
+					%p.text-about 
+						%em Срок изготовления: 
+						%strong 3—4 недели
+					%p.text-about 
+						%em Цена: 
+						%strong 4 300 грн 
+			.slide{ :style => "background: url(../images/photo_main_3_front.png) no-repeat 100% 0", :data =>{ :style => "background: url(../images/photo_main_3_back.png) no-repeat 100% 0", :name => "Показать оригинальные фото"}}
+				.slide-photo-controller
+					%a{ :href => "#"} Показать платье в жизни
+				.slide-text
+					%h3 
+						%a{ :href => "/weddingdresses/pronovias/Frenesi"}Платье Pronovias Frenesi
+					%p.text-main Изысканное платье в стиле русалка из атласа, органзы и шифона.
+					%p.text-about 
+						%em Срок изготовления: 
+						%strong 3—4 недели
+					%p.text-about 
+						%em Цена: 
+						%strong 4 500 грн 
 	.tl
 	.tr
 	.bl

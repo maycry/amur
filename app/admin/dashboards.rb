@@ -15,7 +15,7 @@ ActiveAdmin::Dashboards.build do
   #     end
   #   end
   section "Recent Products" do
-    table_for Product.order("released_at desc").limit(5) do
+    table_for Product.order("created_at desc").limit(5) do
       column "Image" do |product|
         image_tag product.productimages.first.image.url(:thumb), :height => "50px" if product.productimages.first !=nil
       end

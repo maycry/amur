@@ -1,5 +1,5 @@
 class OrderMailer < ActionMailer::Base
-  default :from => "lasposacontact@gmail.com"
+  default :from => "shlakomilo@yandex.ru"
   
   def order_complete(order, adress)
     @order = order

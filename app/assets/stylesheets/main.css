@@ -501,21 +501,20 @@ fieldset.size ol li p{
 	width: 525px;
 	margin-left: -15px;
 }
-.create{
+.create, a#buy_button{
 	background: url(../images/buy.png);
-	width: 109px;
-	height: 58px;
+	width: 122px;
+	height: 65px;
 	display: inline;
 	border: none;
 	float: right;
 	margin-right: 100px;
 	cursor: pointer;
-	
 }
-.create:hover{
-	background: url(../images/buy.png) 0px 58px;
+.create:hover, a:hover#buy_button{
+	background: url(../images/buy.png) 0px 65px;
 }
-.create:active{
+.create:active, a:active#buy_button{
 	background: url(../images/buy.png);
 }
 #howto{
@@ -627,20 +626,13 @@ fieldset.size ol li p{
 	white-space: nowrap;
 }
 a#buy_button{
-	background: url(../images/buy.png);
-	width: 122px;
-	height: 65px;
 	display: block;
 	margin-left: 120px;
 	margin-bottom: 20px;
 	margin-top: -5px;
+	float: none;
 }
-a:hover#buy_button{
-	background: url(../images/buy.png) 0px 65px;
-}
-a:active#buy_button{
-	background: url(../images/buy.png);
-}
+
 #discount{
 	margin:20px 0 0 3px;
 	color:#dc5bc8;

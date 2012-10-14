@@ -541,7 +541,7 @@ fieldset.size ol li p{
 	text-align: center;
 	clear:both;
 	padding-top: 10px;
-	height: 120px;
+	height: 60px;
 	font-size: 0.875em;
 	cursor: default;
 }
@@ -685,4 +685,8 @@ a#buy_button{
 .table_label{
 	color: #999999;
 	width: 80px;
+}
+.bottom{
+	width:100%;
+	height: 60px;
 }

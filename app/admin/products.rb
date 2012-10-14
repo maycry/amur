@@ -28,7 +28,7 @@ ActiveAdmin.register Product do
   controller do
     def new
       @product = Product.new
-      @productimages = 3.times { @product.productimages.build }
+      @productimages = 4.times { @product.productimages.build }
       @product.released_at ||= Date.today
       @product.is_active ||= true
       @product.type_id ||= Type.first.id
@@ -42,7 +42,7 @@ ActiveAdmin.register Product do
     
     def edit
       @product = Product.find(params[:id])
-      @productimages = (3-@product.productimages.size).times { @product.productimages.build }
+      @productimages = (4-@product.productimages.size).times { @product.productimages.build }
     end
     
     def create

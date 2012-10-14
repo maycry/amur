@@ -17,7 +17,8 @@ class ProductsController < ApplicationController
   end
   
   def show
-    @product = Product.find_by_articul(params[:articul])
+    # @product = Product.find_by_articul(params[:articul])
+    @product = Product.where("articul = ? AND category_id = ?", params[:articul], Category.find_by_alias(params[:category_alias]).id).first
     @next_product = Product.next_product(@product.id, Type.find_by_alias(params[:type_alias]).id)
     @previos_product = Product.previos_product(@product.id, Type.find_by_alias(params[:type_alias]).id)
     @pages = Page.all

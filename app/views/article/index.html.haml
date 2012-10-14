@@ -1,0 +1,9 @@
+-title(@article.name)
+#wrap
+	.left-col
+		%h1
+			=@article.name
+		= markdown @article.content
+	.right-col
+		-@articles.each do |article|
+			= link_to_unless_current article.name, article_path(article.alias),{ :class => "article-link"}

@@ -108,6 +108,15 @@
   position:absolute;
   display:block;
 }
+.zoomThumbActive img{
+  border: #d27cb2 solid 1px;
+  margin: -1px 0 0 -1px;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+  pointer-events: none;
+  cursor: default;
+}
 
 /*********************************************************
 / When clicking on thumbs jqzoom will add the class

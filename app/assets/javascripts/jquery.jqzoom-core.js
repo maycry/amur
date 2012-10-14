@@ -166,6 +166,7 @@
                     if (regex.test(rel)) {
                         return this;
                     }
+                    $(this).addClass('asd')
                 });
                 if (thumblist.length > 0) {
                     //getting the first to the last

@@ -3,8 +3,10 @@
   #productblock
     #product__image
       #product__image_stack
-        -@product.productimages.each do|productimage|
-          =link_to image_tag(productimage.image.url(:thumb), :style => "width:88px"), "javascript:void(0);", :rel => "{gallery: 'gal', smallimage: '#{productimage.image}',largeimage:'#{productimage.image}'}"
+        -@product.productimages.each do |productimage|
+          -image_class = ""
+          -image_class = "zoomThumbActive" if @product.productimages.first == productimage 
+          =link_to image_tag(productimage.image.url(:thumb), :style => "width:88px"), "javascript:void(0);", :rel => "{gallery: 'gal', smallimage: '#{productimage.image}',largeimage:'#{productimage.image}'}", :class => image_class
             
       =image_tag "../images/instock.png", :class => "instock_onproduct", :alt => "В наличии", :style => get_instock_margin if @product.in_stock
       =link_to image_tag(@product.productimages.first.image, :style => get_image_size), @product.productimages.first.image.to_s, :class => "zoomer", :rel => "gal"

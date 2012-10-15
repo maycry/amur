@@ -402,7 +402,7 @@ a:hover#header__logo {
 .under-block-shadow{
 	position: absolute;
 	width: 950px;
-	height: 30px;
+	height: 43px;
 	background: transparent url(../assets/under_block_shadow.png) 50% 0 no-repeat;
 	top: 100%;
 	left: 15px;

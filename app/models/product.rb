@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  paginates_per 15
+  paginates_per 25
   
   belongs_to :type
   belongs_to :category

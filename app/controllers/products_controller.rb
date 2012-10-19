@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
     #redirect_to "/weddingdresses/all"
     @pages = Page.all
     @types = Type.has_products
-    @products = Product.order("created_at desc").limit(15).page(1);
+    @products = Product.order("created_at desc").page(1);
   end
   
   def index

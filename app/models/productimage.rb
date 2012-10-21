@@ -2,7 +2,7 @@ class Productimage < ActiveRecord::Base
   belongs_to :product
   
   has_attached_file :image, 
-    :styles => {:thumb => "180x284#"},
+    :styles => {:thumb => "180x284#", :thumb_bigger => "231x364#", :thumb_bigest => "312x491#"},
     :url  => "products/:product_id/:style/:basename.:extension",
     :path => "products/:product_id/:style/:basename.:extension",
     :storage => :s3,

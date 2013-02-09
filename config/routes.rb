@@ -1,6 +1,7 @@
 Amur::Application.routes.draw do
   resources :orders
 
+  get 'sitemap.xml' => 'sitemaps#show',                             :as => :sitemap, :defaults => { :format => "xml" }
   get "pages/show"
 
   ActiveAdmin.routes(self)

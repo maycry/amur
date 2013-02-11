@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.10'
+gem 'rails', '3.1.11'
 gem 'sqlite3'
-gem 'json'
+gem 'json', '1.6.8'
 gem 'haml'
 gem 'activeadmin'
 gem "paperclip", "~> 2.4"

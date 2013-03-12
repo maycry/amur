@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.11'
-gem 'sqlite3'
 gem 'json', '1.6.8'
 gem 'haml'
 gem 'activeadmin'
@@ -26,6 +25,7 @@ group :assets do
 end
 group :development do
   gem 'rails-dev-tweaks', '~> 0.5.1'
+  gem 'sqlite3'
 end
 
 gem 'jquery-rails'

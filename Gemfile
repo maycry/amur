@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+ruby "1.8.7"
 
 gem 'rails', '3.1.11'
 gem 'sqlite3'
@@ -18,6 +19,7 @@ group :production do
   gem 'execjs'
   gem 'therubyracer'
   gem 'pg'
+  gem 'thin'
 end
 group :assets do
   gem 'coffee-rails', "~> 3.1.0"

@@ -1,0 +1,5 @@
+=== amur Configured Add-ons
+heroku-postgresql:dev  HEROKU_POSTGRESQL_ONYX
+pgbackups:basic
+zerigo_dns:basic
+

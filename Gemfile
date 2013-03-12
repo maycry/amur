@@ -20,7 +20,6 @@ group :production do
   gem 'therubyracer'
   gem 'pg'
   gem 'thin'
-  gem "bcrypt-ruby"
 end
 group :assets do
   gem 'coffee-rails', "~> 3.1.0"

@@ -1,15 +1,7 @@
 .slider.corners
-	.slider-controller-right
-	.slider-controller-left
-	.slider-viewer-center
-		%span.active
-		%span
-		%span
 	.slider-inner-container
-		.slider-inner-wrapper
+		.slider-inner-wrapper.fotorama{:data =>{ :nav => "dots"}}
 			.slide{ :style => "background: url(../images/photo_main_1_front.png) no-repeat 100% 0", :data =>{ :style => "background: url(../images/photo_main_1_back.png) no-repeat 100% 0", :name => "Показать оригинальные фото"}}
-				.slide-photo-controller
-					%a{ :href => "#"} Показать платье в жизни
 				.slide-text
 					%h3 
 						%a{ :href => "/weddingdresses/rosaclara/Orsinis"}Платье Rosa Clara Orsinis
@@ -21,8 +13,6 @@
 						%em Цена: 
 						%strong 4 550 грн 
 			.slide{ :style => "background: url(../images/photo_main_2_front.png) no-repeat 100% 0", :data =>{ :style => "background: url(../images/photo_main_2_back.png) no-repeat 100% 0", :name => "Показать оригинальные фото"}}
-				.slide-photo-controller
-					%a{ :href => "#"} Показать платье в жизни
 				.slide-text
 					%h3 
 						%a{ :href => "/weddingdresses/pronovias/PR%20026"}Платье Pronovias PR-026
@@ -34,8 +24,6 @@
 						%em Цена: 
 						%strong 4 300 грн 
 			.slide{ :style => "background: url(../images/photo_main_3_front.png) no-repeat 100% 0", :data =>{ :style => "background: url(../images/photo_main_3_back.png) no-repeat 100% 0", :name => "Показать оригинальные фото"}}
-				.slide-photo-controller
-					%a{ :href => "#"} Показать платье в жизни
 				.slide-text
 					%h3 
 						%a{ :href => "/weddingdresses/pronovias/Frenesi"}Платье Pronovias Frenesi

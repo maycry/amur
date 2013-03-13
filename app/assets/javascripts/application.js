@@ -10,3 +10,4 @@
 //= require orders
 //= require rails.validations
 //= require slider
+//= require fotorama

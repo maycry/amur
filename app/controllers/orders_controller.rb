@@ -1,3 +1,6 @@
+#!/bin/env ruby
+# encoding: utf-8
+
 class OrdersController < ApplicationController
   def new
     @order = Order.new(:product_id => params[:product_id])

@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class Productimage < ActiveRecord::Base
   belongs_to :product
   

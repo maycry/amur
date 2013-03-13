@@ -1,4 +1,5 @@
 Amur::Application.routes.draw do
+  break if ARGV.join.include? 'assets:precompile'
   resources :orders
 
   get 'sitemap.xml' => 'sitemaps#show',                             :as => :sitemap, :defaults => { :format => "xml" }

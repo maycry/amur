@@ -19,4 +19,5 @@
       = link_to( image_tag(productimage.object.image.url(:thumb)), productimage.object.image.url(:original))
       = link_to 'Delete', destroy_image_path(@product.id, productimage.object.id), :method => :delete
     
-  = f.buttons :commit
+  = f.action :submit
+

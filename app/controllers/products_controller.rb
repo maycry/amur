@@ -12,6 +12,7 @@ class ProductsController < ApplicationController
   
   def index
     @type_alias = Type.find_by_alias(params[:type_alias]).id 
+    
     @pages = Page.all
     @types = Type.has_products
     @categories = Category.current_categories(@type_alias)
@@ -37,8 +38,6 @@ class ProductsController < ApplicationController
     @productimage.destroy
     redirect_to(edit_admin_product_path(params[:id]))
   end
-
-
 
 
   private

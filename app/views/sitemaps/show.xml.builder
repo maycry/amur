@@ -4,7 +4,7 @@ xml.tag! 'urlset', 'xmlns' => 'http://www.sitemaps.org/schemas/sitemap/0.9' do
   xml.url {
     xml.loc("http://www.lasposa.kiev.ua/")
     xml.priority(1)
-    xml.changefreq("d
+    xml.changefreq("daily")
   }
   @types.each do |type|
     xml.url {
